@@ -70,7 +70,7 @@ def get_optimization_ip():
         data = {"key": KEY}
         data = json.dumps(data).encode()
         response = http.request('POST','https://api.hostmonit.com/get_optimization_ip',body=data, headers=headers)
-                ann = http.request('GET', url = 'https://api.telegram.org/bot1098155899:AAFTHU6TgX2ldYWUrQ1pLqocJf9Ek6NXA4o/sendMessage?chat_id=-1001416761712&text=&' + json.loads(response.data.decode('utf-8')), retries=False)
+        ann = http.request('GET', url = 'https://api.telegram.org/bot1098155899:AAFTHU6TgX2ldYWUrQ1pLqocJf9Ek6NXA4o/sendMessage?chat_id=-1001416761712&text=&' + json.loads(response.data.decode('utf-8')), retries=False)
         return json.loads(response.data.decode('utf-8'))
     except Exception as e:
         print(e)
