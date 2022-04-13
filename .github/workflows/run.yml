@@ -3,7 +3,7 @@ name: 'GitHub Actions CloudFlare2DNSPod Bot'
 on:
   push:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '*/10 * * * *'
   watch:
     types: [started]
 
